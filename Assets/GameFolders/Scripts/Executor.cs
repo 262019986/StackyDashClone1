@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace GameFolders.Scripts
@@ -58,6 +59,11 @@ namespace GameFolders.Scripts
             {
                 behaviours[i].BaseLateUpdate();
             }
+        }
+
+        private void OnDestroy()
+        {
+            behaviours.Clear();
         }
     }
 }
