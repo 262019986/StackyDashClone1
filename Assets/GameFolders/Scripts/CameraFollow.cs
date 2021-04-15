@@ -6,7 +6,7 @@ namespace GameFolders.Scripts
     public class CameraFollow : BaseBehaviour
     {
         #region FIELDS
-        public int orderID;
+        [SerializeField]private int orderID;
         private Vector3 _offset;
         [SerializeField] private Transform target;
         [SerializeField] private float maxXvalue;

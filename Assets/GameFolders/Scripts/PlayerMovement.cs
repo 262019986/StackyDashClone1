@@ -15,7 +15,7 @@ namespace GameFolders.Scripts
     {
         #region FIELDS
 
-        public int orderID;
+        [SerializeField] private int orderID;
         public  Rigidbody RigidbodyInstance { get; set; }
         public State state = State.Reached;
         public AutoMoveState autoMoveState = AutoMoveState.StartToEnd;

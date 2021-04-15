@@ -10,7 +10,7 @@ namespace GameFolders.Scripts
     {
         #region FIELDS
         
-        public int orderID;
+        [SerializeField]private int orderID;
         private Vector2 _firstTouchPos;
 
         #endregion 

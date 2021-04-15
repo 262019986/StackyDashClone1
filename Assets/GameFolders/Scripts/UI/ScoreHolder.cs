@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 namespace GameFolders.Scripts.UI
@@ -7,7 +6,7 @@ namespace GameFolders.Scripts.UI
     public class ScoreHolder : BaseBehaviour
     {
         #region FIELDS
-        public int orderID;
+        [SerializeField] private int orderID;
         private Text _scoreText;
         private int _scoreCount;
         #endregion

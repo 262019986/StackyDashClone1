@@ -10,8 +10,9 @@ namespace GameFolders.Scripts
         
         #region FIELDS
         
-        public int orderID;
-        public static event Action OnCubeCollected; 
+        [SerializeField] private int orderID;
+        public static event Action OnCubeCollected;
+        public static event Action OnGameFinished;
         [SerializeField] private List<Transform> cubeList = new List<Transform>();
         [SerializeField] private Transform model;
         [SerializeField] private float upAmount;
@@ -118,6 +119,7 @@ namespace GameFolders.Scripts
         {
             if (other.CompareTag(Tags.Finish))
             {
+                OnGameFinished?.Invoke();
                 for (int i = 0; i < cubeList.Count; i++)
                 {
                     cubeList.RemoveAndParentNull();
